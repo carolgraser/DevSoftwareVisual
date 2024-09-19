@@ -9,12 +9,59 @@
         }
 
         // Tabelas
-        public DbSet<Usuario> Usuarios => Set<Usuario>();
 
+        public DbSet<Sessao> Sessoes => Set<Sessao>();
+        public DbSet<Usuario> Usuarios => Set<Usuario>();
         public DbSet<Bomboniere> Bombonieres => Set<Bomboniere>();
     
     }
     public class Banco{
+
+         //Lista de sessoes
+        private static List<Sessao> Sessoes = new List<Sessao>();
+        
+        public static List<Sessao> getSessoes()
+        {
+            return Sessoes;
+        }
+
+        public static Sessao getSessao(int id)
+        {
+            return Sessoes.FirstOrDefault(f => f.id == id);
+        }
+
+        public static Sessao addSessao(Sessao sessao)
+        {
+            sessao.id = Sessoes.Count + 1;
+            Sessoes.Add(sessao);
+            return sessao;
+        }
+
+        public static Sessao updateSessao(int id, Sessao sessao)
+        {
+            var sessaoExistente = Sessoes.FirstOrDefault(f => f.id == id);
+            if (sessaoExistente == null)
+            {
+                return null;
+            }
+
+                sessaoExistente.idFilme = sessao.idFilme;
+                sessaoExistente.idSala = sessao.idSala;
+                sessaoExistente.data = sessao.data;
+            return sessaoExistente;
+        }
+
+        public static bool deleteSessao(int id)
+        {
+            var sessaoExistente = Sessoes.FirstOrDefault(f => f.id == id);
+            if (sessaoExistente == null)
+            {
+                return false;
+            }
+
+            Sessoes.Remove(sessaoExistente);
+            return true;
+        }
 
         // Lista de usuários
         private static List<Usuario> Usuarios = new List<Usuario>();

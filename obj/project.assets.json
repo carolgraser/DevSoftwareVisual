@@ -4020,19 +4020,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\odair\\.nuget\\packages\\": {}
+    "/Users/Erik Arsego/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\odair\\OneDrive\\Documentos\\GitHub\\DevSoftwareVisual\\Cinema.csproj",
+      "projectUniqueName": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj",
       "projectName": "Cinema",
-      "projectPath": "C:\\Users\\odair\\OneDrive\\Documentos\\GitHub\\DevSoftwareVisual\\Cinema.csproj",
-      "packagesPath": "C:\\Users\\odair\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\odair\\OneDrive\\Documentos\\GitHub\\DevSoftwareVisual\\obj\\",
+      "projectPath": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj",
+      "packagesPath": "/Users/Erik Arsego/.nuget/packages/",
+      "outputPath": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\odair\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/Erik Arsego/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4107,7 +4107,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,6 +12,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 // Registrar todas as APIs
+app.ConfigureSessaoApi();
 app.ConfigureUsuarioApi();
 app.ConfigureBomboniereApi();
 
