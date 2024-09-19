@@ -12,6 +12,7 @@
 
         public DbSet<Sessao> Sessoes => Set<Sessao>();
         public DbSet<Usuario> Usuarios => Set<Usuario>();
+        public DbSet<Ingresso> Ingressos => Set<Ingresso>();
         public DbSet<Bomboniere> Bombonieres => Set<Bomboniere>();
     
     }
@@ -106,6 +107,51 @@
             }
 
             Usuarios.Remove(usuarioExistente);
+            return true;
+        }
+        
+         // Lista de ingressos
+        private static List<Ingresso> Ingressos = new List<Ingresso>();
+        
+        public static List<Ingresso> getIngressos()
+        {
+            return Ingressos;
+        }
+
+        public static Ingresso getIngresso(int id)
+        {
+            return Ingressos.FirstOrDefault(i => i.id == id);
+        }
+
+        public static Ingresso addIngresso(Ingresso ingresso)
+        {
+            ingresso.id = Ingressos.Count + 1;
+            Ingressos.Add(ingresso);
+            return ingresso;
+        }
+
+        public static Ingresso updateIngresso(int id, Ingresso ingresso)
+        {
+            var ingressoExistente = Ingressos.FirstOrDefault(i => i.id == id);
+            if (ingressoExistente == null)
+            {
+                return null;
+            }
+
+            ingressoExistente.idSessao = ingresso.idSessao;
+            ingressoExistente.assento = ingresso.assento;
+            return ingressoExistente;
+        }
+
+        public static bool deleteIngresso(int id)
+        {
+            var ingressoExistente = Ingressos.FirstOrDefault(i => i.id == id);
+            if (ingressoExistente == null)
+            {
+                return false;
+            }
+
+            Ingressos.Remove(ingressoExistente);
             return true;
         }
 

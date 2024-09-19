@@ -14,6 +14,7 @@ app.UseSwaggerUI();
 // Registrar todas as APIs
 app.ConfigureSessaoApi();
 app.ConfigureUsuarioApi();
+app.ConfigureIngressoApi();
 app.ConfigureBomboniereApi();
 
 app.MapGet("/", () => "Cinema Api");
