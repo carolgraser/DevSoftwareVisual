@@ -10,6 +10,8 @@
 
         // Tabelas
         public DbSet<Usuario> Usuarios => Set<Usuario>();
+
+        public DbSet<Bomboniere> Bombonieres => Set<Bomboniere>();
     
     }
     public class Banco{
@@ -57,6 +59,51 @@
             }
 
             Usuarios.Remove(usuarioExistente);
+            return true;
+        }
+
+         // Lista de bombonieres
+        private static List<Bomboniere> Bombonieres = new List<Bomboniere>();
+
+        public static List<Bomboniere> getBombonieres()
+        {
+            return Bombonieres;
+        }
+
+        public static Bomboniere getBomboniere(int id)
+        {
+            return Bombonieres.FirstOrDefault(b => b.id == id);
+        }
+
+        public static Bomboniere addBomboniere(Bomboniere bomboniere)
+        {
+            bomboniere.id = Bombonieres.Count + 1;
+            Bombonieres.Add(bomboniere);
+            return bomboniere;
+        }
+
+        public static Bomboniere updateBomboniere(int id, Bomboniere bomboniere)
+        {
+            var bomboniereExistente = Bombonieres.FirstOrDefault(b => b.id == id);
+            if (bomboniereExistente == null)
+            {
+                return null;
+            }
+
+            bomboniereExistente.produto = bomboniere.produto;
+            bomboniereExistente.valor = bomboniere.valor;
+            return bomboniereExistente;
+        }
+
+        public static bool deleteBomboniere(int id)
+        {
+            var bomboniereExistente = Bombonieres.FirstOrDefault(b => b.id == id);
+            if (bomboniereExistente == null)
+            {
+                return false;
+            }
+
+            Bombonieres.Remove(bomboniereExistente);
             return true;
         }
 

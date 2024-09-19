@@ -13,7 +13,8 @@ app.UseSwaggerUI();
 
 // Registrar todas as APIs
 app.ConfigureUsuarioApi();
+app.ConfigureBomboniereApi();
 
-app.MapGet("/", () => "Planner API");
+app.MapGet("/", () => "Cinema Api");
 
 app.Run();
