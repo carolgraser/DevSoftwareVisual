@@ -17,6 +17,7 @@ app.ConfigureUsuarioApi();
 app.ConfigureIngressoApi();
 app.ConfigureBomboniereApi();
 app.ConfigureFilmeApi();
+app.ConfigureSalaApi();
 
 app.MapGet("/", () => "Cinema Api");
 

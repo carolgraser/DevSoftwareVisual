@@ -15,6 +15,7 @@
         public DbSet<Ingresso> Ingressos => Set<Ingresso>();
         public DbSet<Bomboniere> Bombonieres => Set<Bomboniere>();
         public DbSet<Filme> Filmes => Set<Filme>();
+        public DbSet<Sala> Salas => Set<Sala>();
     
     }
     public class Banco{
@@ -243,6 +244,49 @@
             }
 
             Filmes.Remove(filmeExistente);
+            return true;
+        }
+
+        private static List<Sala> Salas = new List<Sala>();
+
+        public static List<Sala> getSalas()
+        {
+            return Salas;
+        }
+
+        public static Sala getSala(int id)
+        {
+            return Salas.FirstOrDefault(s => s.Id == id);
+        }
+
+        public static Sala addSala(Sala sala)
+        {
+            sala.Id = Salas.Count + 1;
+            Salas.Add(sala);
+            return sala;
+        }
+
+        public static Sala updateSala(int id, Sala sala)
+        {
+            var salaExistente = Salas.FirstOrDefault(s => s.Id == id);
+            if (salaExistente == null)
+            {
+                return null;
+            }
+
+            salaExistente.qntCadeiras = sala.qntCadeiras;
+            return salaExistente;
+        }
+
+        public static bool deleteSala(int id)
+        {
+            var salaExistente = Salas.FirstOrDefault(s => s.Id == id);
+            if (salaExistente == null)
+            {
+                return false;
+            }
+
+            Salas.Remove(salaExistente);
             return true;
         }
 

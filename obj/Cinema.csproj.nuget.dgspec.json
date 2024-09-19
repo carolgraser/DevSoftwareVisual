@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj": {}
+    "C:\\xampp\\htdocs\\Github\\DevSoftwareVisual\\Cinema.csproj": {}
   },
   "projects": {
-    "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj": {
+    "C:\\xampp\\htdocs\\Github\\DevSoftwareVisual\\Cinema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\Github\\DevSoftwareVisual\\Cinema.csproj",
         "projectName": "Cinema",
-        "projectPath": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/Cinema.csproj",
-        "packagesPath": "/Users/Erik Arsego/.nuget/packages/",
-        "outputPath": "/Users/Erik Arsego/ProjetoJava/Sem Título/DevSoftwareVisual/obj/",
+        "projectPath": "C:\\xampp\\htdocs\\Github\\DevSoftwareVisual\\Cinema.csproj",
+        "packagesPath": "C:\\Users\\leyuk\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\htdocs\\Github\\DevSoftwareVisual\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/Erik Arsego/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\leyuk\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -36,8 +39,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -81,6 +85,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.8, 8.0.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.8, 8.0.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.8, 8.0.8]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.8, 8.0.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
