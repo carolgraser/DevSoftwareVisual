@@ -14,6 +14,7 @@
         public DbSet<Usuario> Usuarios => Set<Usuario>();
         public DbSet<Ingresso> Ingressos => Set<Ingresso>();
         public DbSet<Bomboniere> Bombonieres => Set<Bomboniere>();
+        public DbSet<Filme> Filmes => Set<Filme>();
     
     }
     public class Banco{
@@ -197,6 +198,51 @@
             }
 
             Bombonieres.Remove(bomboniereExistente);
+            return true;
+        }
+
+        //Lista filmes
+
+        private static List<Filme> Filmes = new List<Filme>();
+        
+        public static List<Filme> getFilmes()
+        {
+            return Filmes;
+        }
+
+        public static Filme getFilme(int id)
+        {
+            return Filmes.FirstOrDefault(f => f.id == id);
+        }
+
+        public static Filme addFilme(Filme filme)
+        {
+            filme.id = Filmes.Count + 1;
+            Filmes.Add(filme);
+            return filme;
+        }
+
+        public static Filme updateFilme(int id, Filme filme)
+        {
+            var filmeExistente = Filmes.FirstOrDefault(f => f.id == id);
+            if (filmeExistente == null)
+            {
+                return null;
+            }
+
+            filmeExistente.titulo = filme.titulo;
+            return filmeExistente;
+        }
+
+        public static bool deleteFilme(int id)
+        {
+            var filmeExistente = Filmes.FirstOrDefault(f => f.id == id);
+            if (filmeExistente == null)
+            {
+                return false;
+            }
+
+            Filmes.Remove(filmeExistente);
             return true;
         }
 
